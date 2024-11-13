@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
 
-export default function NavBar({ user }) {
+export default function NavBar({ user, handleSignout }) {
   return (
     <>
       {user ? (
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="" >Sign Out</Link></li>
+            <li><Link to="" onClick={handleSignout}>Sign Out</Link></li>
           </ul>
         </nav>
       ) : (
