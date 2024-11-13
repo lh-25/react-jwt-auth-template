@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
+import SignupForm from './components/SignupForm/SignupForm';
 
 export default function App() {
   const [user, setUser] = useState(null)
@@ -18,8 +19,7 @@ export default function App() {
         ) : (
           <Route path='/' element={<Landing />} />
         )}
-        
-
+        <Route path='/signup' element={<SignupForm setUser={setUser} />} />
       </Routes>
     </>
   )
